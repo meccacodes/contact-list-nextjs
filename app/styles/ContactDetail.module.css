@@ -1,0 +1,129 @@
+.container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 2rem 1rem;
+}
+
+.wrapper {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  color: #2563eb;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+
+.backLink:hover {
+  color: #1e40af;
+}
+
+.backIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.cardContent {
+  padding: 2rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.imageContainer {
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  flex-shrink: 0;
+}
+
+.image {
+  border-radius: 50%;
+  border: 4px solid #f3f4f6;
+  object-fit: cover;
+}
+
+.details {
+  flex: 1;
+  text-align: center;
+}
+
+.name {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.infoGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.value {
+  font-size: 1.125rem;
+  color: #111827;
+}
+
+.actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.editButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.editButton:hover {
+  background-color: #1e40af;
+}
+
+.editIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .contactInfo {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .details {
+    text-align: left;
+  }
+
+  .actions {
+    justify-content: flex-start;
+  }
+}

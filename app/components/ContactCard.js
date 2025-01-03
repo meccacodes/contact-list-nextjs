@@ -19,8 +19,11 @@ export default function ContactCard({ contact }) {
           />
         </div>
         <div className={styles.info}>
-          <Link href={`/contacts/${contact.id}`}>
-            <h2>{contact.name}</h2>
+          <Link
+            href={`/contacts/${contact.id}`}
+            className="text-lg font-semibold hover:text-blue-600 transition-colors"
+          >
+            {contact.name}
           </Link>
           <p>{contact.email}</p>
           <p>{contact.phone_number}</p>
