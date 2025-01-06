@@ -7,7 +7,6 @@ export function ContactsProvider({ children }) {
   const [contacts, setContacts] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Load contacts from localStorage only after component mounts
   useEffect(() => {
     try {
       const savedContacts = localStorage.getItem("contacts");
@@ -20,7 +19,6 @@ export function ContactsProvider({ children }) {
     setIsLoaded(true);
   }, []);
 
-  // Save contacts to localStorage whenever they change
   useEffect(() => {
     if (isLoaded) {
       try {
@@ -43,14 +41,17 @@ export function ContactsProvider({ children }) {
 
   const updateContact = (updatedContact) => {
     setContacts((prevContacts) =>
-      prevContacts.map((contact) =>
-        contact.id === updatedContact.id ? updatedContact : contact
-      )
+      prevContacts.map((contact) => {
+        if (contact.id === updatedContact.id) {
+          return updatedContact;
+        }
+        return contact;
+      })
     );
   };
 
   if (!isLoaded) {
-    return null; // or a loading spinner
+    return null;
   }
 
   return (

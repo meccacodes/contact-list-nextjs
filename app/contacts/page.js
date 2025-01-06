@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import Link from "next/link";
 import ContactCard from "../components/ContactCard";
 import styles from "../styles/Contacts.module.css";
@@ -13,7 +12,7 @@ export default function Contacts() {
     sampleContacts.forEach((contact) => {
       addContact({
         ...contact,
-        id: contact.id + Date.now(), // ensure unique IDs
+        id: contact.id + Date.now(),
       });
     });
   };
